@@ -45,6 +45,7 @@ export const DeckList = () => {
     <Card key={deck.id}>
       <Card.Body>
         <Card.Title>{deck.name}</Card.Title>
+        <Card.Text>{deck.cards.length} cards</Card.Text>
         <Card.Text>{deck.description}</Card.Text>
         <Button
           variant="secondary"

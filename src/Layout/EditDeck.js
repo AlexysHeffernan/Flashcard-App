@@ -12,11 +12,8 @@ function EditDeck() {
   const { deckId } = useParams();
   const [deck, setDeck] = useState({});
   const [error, setError] = useState(undefined);
-  const initialFormState = {
-    name: deck.name,
-    description: deck.description,
-  };
-  const [formData, setFormData] = useState({ ...initialFormState });
+  
+  const [formData, setFormData] = useState({});
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -25,8 +22,8 @@ function EditDeck() {
       .then((response) => {
         setDeck(response);
         setFormData({
-          name: deck.name,
-          description: deck.description,
+          name: response.name,
+          description: response.description,
         });
       })
       .catch((error) => {
