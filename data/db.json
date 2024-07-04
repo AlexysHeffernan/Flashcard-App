@@ -1,0 +1,78 @@
+{
+  "decks": [
+    {
+      "id": 1,
+      "name": "Rendering in React",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. "
+    },
+    {
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 2
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 3
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 4
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 5
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 6
+    },
+    {
+      "name": "",
+      "description": "",
+      "id": 7
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "front": "Differentiate between Real DOM and Virtual DOM.",
+      "back": "Virtual DOM updates are faster but do not directly update the HTML",
+      "deckId": 1
+    },
+    {
+      "front": "How do you modify the state of a different React component?",
+      "back": "component only.",
+      "id": 2,
+      "deckId": "1"
+    },
+    {
+      "front": "How do you pass data 'down' to a React child component?",
+      "back": "As p",
+      "id": 3,
+      "deckId": "1"
+    },
+    {
+      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
+      "back": "All paths. A route with no path matches all URL's",
+      "deckId": 2,
+      "id": 4
+    },
+    {
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
+      "deckId": 2,
+      "id": 5
+    },
+    {
+      "cards": [],
+      "front": "b",
+      "back": "b",
+      "deckId": 1,
+      "id": 7
+    }
+  ]
+}
