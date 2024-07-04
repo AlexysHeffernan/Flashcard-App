@@ -45,9 +45,9 @@ function EditDeck() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submitted:", formData);
-    updateDeck(formData);
-    navigate(`/decks/${deckId}`);
+    updateDeck({ ...formData, id: deckId })
+    .then(()=> navigate(`/decks/${deckId}`))
+    .catch((error)=>setError(error));
   };
 
   return (
