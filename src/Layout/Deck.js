@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import { deleteDeck, readDeck } from "../utils/api/index.js";
+import { deleteDeck, readDeck, deleteCard } from "../utils/api/index.js";
 import { useNavigate, useParams } from "react-router-dom";
 import ErrorMessage from "./ErrorMessage";
 
@@ -31,16 +31,38 @@ const Deck = () => {
     return <ErrorMessage error={error} />;
   }
 
-  const handleDelete = async () => {
+  const handleDeckDelete = async (deckId) => {
     const result = window.confirm(
-      "Delete this deck? You will not be able to recover it."
+        "Delete this deck? You will not be able to recover it."
+      );
+      if (result) {
+        try {
+          await deleteDeck(deckId);
+          navigate('/');
+        } catch (error) {
+          setError(error);
+        }
+      }
+    };
+
+  const handleCardDelete = async (cardId) => {
+     const result = window.confirm(
+      "Delete this card? You will not be able to recover it."
     );
     if (result) {
-      await deleteDeck(deckId);
-      navigate("/");
+      try {
+        await deleteCard(cardId);
+        window.location.reload();
+      } catch (error) {
+        setError(error);
+      }
     }
   };
 
+  if (error) {
+    return <ErrorMessage error={error} />;
+  }
+console.log("DECK ", deck.cards);
   return (
     <div>
       <Card variant="secondary">
@@ -67,7 +89,7 @@ const Deck = () => {
       <Button
         variant="primary"
         onClick={() => navigate(`/decks/${deck.id}/study`)} className="ml-2"
-      >
+      > 
         Study
       </Button>
 
@@ -77,7 +99,7 @@ const Deck = () => {
       >
         Add Cards
       </Button>
-      <Button variant="danger" onClick={handleDelete} className="ml-2"> 
+      <Button variant="danger" onClick={()=>handleDeckDelete(deck.id)} className="ml-2"> 
         Delete
       </Button>
 
@@ -105,7 +127,7 @@ const Deck = () => {
                   </Button>
                   <Button
                     variant="danger"
-                    className="ml-2"                  >
+                    className="ml-2" onClick={()=>handleCardDelete(card.id)}  >
                     Delete
                   </Button>
                 </Col>

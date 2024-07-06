@@ -28,20 +28,30 @@ export const DeckList = () => {
     return <ErrorMessage error={error} />;
   }
 
-  const handleDelete = async () => {
+  const handleDelete = async (deckId) => {
     const result = window.confirm(
       "Delete this deck? You will not be able to recover it."
     );
     if (result) {
-      await deleteDeck();
-      navigate("/");
+      try {
+        await deleteDeck(deckId);
+        setDecks((prevDecks) => prevDecks.filter((deck) => deck.id !== deckId));
+      } catch (error) {
+        setError(error);
+      }
     }
   };
+
+  if (error) {
+    return <ErrorMessage error={error} />;
+  }
+
 
   const list = Array.isArray(decks)
     ? decks.filter((deck) => deck.name !== "")
     : null;
   const filteredList = list.map((deck) => (
+   
     <Card key={deck.id}>
       <Card.Body>
         <Card.Title>{deck.name}</Card.Title>
@@ -60,7 +70,7 @@ export const DeckList = () => {
         >
           Study
         </Button>
-        <Button variant="danger" onClick={handleDelete} className="ml-2">
+        <Button variant="danger" onClick={()=>handleDelete(deck.id)} className="ml-2">
           Delete
         </Button>
       </Card.Body>

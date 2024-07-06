@@ -1,16 +1,6 @@
 {
   "decks": [
     {
-      "name": "Rendering in React TE",
-      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation. ",
-      "id": 1
-    },
-    {
-      "name": "React Router",
-      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
-      "id": 2
-    },
-    {
       "name": "",
       "description": "",
       "id": 3
@@ -36,70 +26,246 @@
       "id": 7
     },
     {
-      "name": "Mock",
-      "description": "Test!",
+      "name": "Rendering in React 1",
+      "description": "React's component structure allows for quickly building a complex web application that relies on DOM manipulation.",
       "id": 8
+    },
+    {
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 9
     }
   ],
   "cards": [
-    {
-      "front": "TE Differentiate between Real DOM and Virtual DOM.",
-      "back": "Virtual DOM updates are faster but do not directly update the HTML",
-      "id": 1,
-      "deckId": "1"
-    },
-    {
-      "front": "How do you modify the state of a different React component?",
-      "back": "component only.",
-      "id": 2,
-      "deckId": "1"
-    },
-    {
-      "front": "How do you pass data 'down' to a React child component?",
-      "back": "As p",
-      "id": 3,
-      "deckId": "1"
-    },
-    {
-      "front": "What path will match the follow Route?\n<Route>\n  <NotFound />\n</Route>",
-      "back": "All paths. A route with no path matches all URL's",
-      "deckId": 2,
-      "id": 4
-    },
-    {
-      "front": "What does <Switch> do?",
-      "back": "Renders the first matching child <Route> ",
-      "deckId": 2,
-      "id": 5
-    },
-    {
-      "cards": [],
-      "front": "b",
-      "back": "b",
-      "deckId": 1,
-      "id": 7
-    },
-    {
-      "front": "Test ",
-      "back": "Test back",
-      "id": 8,
-      "deckId": "1"
-    },
     {
       "front": "Test front edit",
       "back": "Test back",
       "id": 9
     },
     {
-      "front": "Test front edit",
-      "back": "Test back",
-      "id": 10,
-      "deckId": "1"
-    },
-    {
       "front": "Test front",
       "back": "Test back 1",
       "id": 11
+    },
+    {
+      "0": "1",
+      "1": "2",
+      "id": 12,
+      "deckId": "9"
+    },
+    {
+      "front": "test",
+      "back": "Renders the first matching child <Route>",
+      "id": 13,
+      "deckId": "9"
+    },
+    {
+      "deckId": "9",
+      "id": 14,
+      "formData": {
+        "front": "test",
+        "back": "2"
+      }
+    },
+    {
+      "id": 15,
+      "front": "test",
+      "back": "2",
+      "deckId": "9"
+    },
+    {
+      "front": "new",
+      "back": "2",
+      "id": 16,
+      "deckId": "9"
+    },
+    {
+      "front": "test",
+      "back": "2",
+      "deckId": "8",
+      "id": 17
+    },
+    {
+      "front": "8",
+      "back": "2",
+      "deckId": "8",
+      "id": 18
+    },
+    {
+      "front": "test",
+      "back": "2",
+      "deckId": "8",
+      "id": 19
+    },
+    {
+      "front": "test",
+      "back": "2",
+      "deckId": "8",
+      "id": 20
+    },
+    {
+      "front": "2",
+      "back": "2",
+      "deckId": "8",
+      "id": 21
+    },
+    {
+      "front": "12",
+      "back": "2",
+      "deckId": "8",
+      "id": 22
+    },
+    {
+      "front": "12",
+      "back": "2",
+      "deckId": "8",
+      "id": 23
+    },
+    {
+      "front": "22",
+      "back": "2",
+      "id": 24,
+      "deckId": "8"
+    },
+    {
+      "front": "12",
+      "back": "2",
+      "id": 25,
+      "deckId": "8"
+    },
+    {
+      "front": "12",
+      "back": "2",
+      "id": 26,
+      "deckId": "8"
+    },
+    {
+      "front": "13",
+      "back": "2",
+      "id": 27,
+      "deckId": "8"
+    },
+    {
+      "front": "3666",
+      "back": "4",
+      "id": 28,
+      "deckId": "8"
+    },
+    {
+      "front": "12",
+      "back": "2",
+      "id": 29,
+      "deckId": "8"
+    },
+    {
+      "front": "13",
+      "back": "2",
+      "id": 30,
+      "deckId": "8"
+    },
+    {
+      "front": "13",
+      "back": "2",
+      "id": 31,
+      "deckId": "8"
+    },
+    {
+      "front": "2",
+      "back": "1",
+      "id": 32,
+      "deckId": "8"
+    },
+    {
+      "front": "12",
+      "back": "2",
+      "id": 33,
+      "deckId": "8"
+    },
+    {
+      "front": "12",
+      "back": "2",
+      "id": 34,
+      "deckId": "8"
+    },
+    {
+      "front": "1",
+      "back": "gdgfdgf",
+      "id": 35,
+      "deckId": "8"
+    },
+    {
+      "front": "front",
+      "back": "33",
+      "id": 36,
+      "deckId": "8"
+    },
+    {
+      "front": "12",
+      "back": "2",
+      "id": 37,
+      "deckId": "8"
+    },
+    {
+      "front": "new",
+      "back": "2",
+      "id": 38,
+      "deckId": "8"
+    },
+    {
+      "front": "155",
+      "back": "2",
+      "id": 39,
+      "deckId": "9"
+    },
+    {
+      "deckId": "9",
+      "id": 40,
+      "formData": {
+        "front": "1333",
+        "back": "2"
+      }
+    },
+    {
+      "deckId": "9",
+      "id": 41,
+      "front": "122",
+      "back": "2"
+    },
+    {
+      "deckId": "9",
+      "id": 42,
+      "front": "133",
+      "back": "2"
+    },
+    {
+      "deckId": "9",
+      "id": 43,
+      "front": "122",
+      "back": "2"
+    },
+    {
+      "front": "2bb",
+      "back": "3sss",
+      "deckId": 9,
+      "id": 44
+    },
+    {
+      "front": "1",
+      "back": "2",
+      "deckId": 8,
+      "id": 45
+    },
+    {
+      "front": "front",
+      "back": "back",
+      "deckId": 8,
+      "id": 46
+    },
+    {
+      "front": "test 1",
+      "back": "test 2",
+      "deckId": 8,
+      "id": 47
     }
   ]
 }

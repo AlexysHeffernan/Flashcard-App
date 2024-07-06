@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { readDeck, updateCard } from "../utils/api/index.js";
+import { readDeck } from "../utils/api/index.js";
 import CardForm from "./CardForm";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -14,7 +14,6 @@ function EditCard() {
   const [deck, setDeck] = useState({});
   const [error, setError] = useState(undefined);
 
-
   useEffect(() => {
     const abortController = new AbortController();
 
@@ -25,18 +24,13 @@ function EditCard() {
       .catch((error) => {
         setError(error);
       });
+
     return () => abortController.abort();
   }, [deckId]);
 
   if (error) {
     return <ErrorMessage error={error} />;
   }
-
-  const handleSubmit = (formData) => {
-    updateCard({ ...formData, id: cardId })
-     .then(()=> navigate(`/decks/${deckId}`))
-    .catch((error)=>setError(error));
-  };
 
   return (
     <Container>
@@ -56,11 +50,7 @@ function EditCard() {
       <Row>
         <h1>Edit Card</h1>
       </Row>
-      <CardForm
-      isNewCard={false}
-      initialFormData={{ front: "", back: "" }}
-      onSubmit={handleSubmit}
-    />
+      <CardForm isNewCard={false} />
     </Container>
   );
 }

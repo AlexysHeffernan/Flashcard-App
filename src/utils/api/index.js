@@ -193,15 +193,17 @@ export async function readCard(cardId, signal) {
  * @returns {Promise<Error|*>}
  *  a promise that resolves to the updated card.
  */
-export async function updateCard(updatedCard, signal) {
-  const url = `${API_BASE_URL}/cards/${updatedCard.id}`;
+export async function updateCard(deckId, cardId, card, signal) {
+
+  const url = `${API_BASE_URL}/cards/${cardId}`;
+  card.deckId = Number(deckId);
   const options = {
     method: "PUT",
     headers,
-    body: JSON.stringify(updatedCard),
+    body: JSON.stringify(card),
     signal
   };
-  return await fetchJson(url, options, updatedCard);
+  return await fetchJson(url, options, card);
 }
 
 /**
@@ -219,12 +221,5 @@ export async function deleteCard(cardId, signal) {
   return await fetchJson(url, options);
 }
 
-/**
- * Retrieves all existing cards.
- * @returns {Promise<[cards]>}
- *  a promise that resolves to a possibly empty array of decks saved in the database.
- */
-export async function listCards(signal) {
-  const url = `${API_BASE_URL}/cards?_embed=cards`;
-  return await fetchJson(url, { signal }, []);
-}
+
+

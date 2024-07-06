@@ -12,7 +12,6 @@ function EditDeck() {
   const { deckId } = useParams();
   const [deck, setDeck] = useState({});
   const [error, setError] = useState(undefined);
-  
   const [formData, setFormData] = useState({});
 
   useEffect(() => {
@@ -46,8 +45,8 @@ function EditDeck() {
   const handleSubmit = (event) => {
     event.preventDefault();
     updateDeck({ ...formData, id: deckId })
-    .then(()=> navigate(`/decks/${deckId}`))
-    .catch((error)=>setError(error));
+      .then(() => navigate(`/decks/${deckId}`))
+      .catch((error) => setError(error));
   };
 
   return (
