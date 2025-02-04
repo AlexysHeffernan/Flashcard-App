@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { readDeck } from "../utils/api/index.js";
 import CardForm from "./CardForm";
 import Container from "react-bootstrap/Container";
@@ -8,8 +8,7 @@ import Card from "react-bootstrap/Card";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import ErrorMessage from "./ErrorMessage";
 
-function EditCard() {
-  const navigate = useNavigate();
+function EditCard() { 
   const { deckId, cardId } = useParams();
   const [deck, setDeck] = useState({});
   const [error, setError] = useState(undefined);

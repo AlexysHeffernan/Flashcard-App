@@ -62,7 +62,7 @@ const Deck = () => {
   if (error) {
     return <ErrorMessage error={error} />;
   }
-console.log("DECK ", deck.cards);
+
   return (
     <div>
       <Card variant="secondary">
@@ -106,6 +106,7 @@ console.log("DECK ", deck.cards);
       <Row>
         <h3>Cards</h3>
       </Row>
+      
       {deck.cards &&
         deck.cards
           .filter((card) => card.front !== "b")

@@ -100,5 +100,4 @@ function CardForm({ isNewCard, initialFormData, onSubmit }) {
     </form>
   );
 }
-
 export default CardForm;

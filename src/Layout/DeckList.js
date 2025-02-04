@@ -24,9 +24,6 @@ export const DeckList = () => {
     return () => abortController.abort();
   }, []);
 
-  if (error) {
-    return <ErrorMessage error={error} />;
-  }
 
   const handleDelete = async (deckId) => {
     const result = window.confirm(

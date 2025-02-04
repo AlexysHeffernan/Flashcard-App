@@ -31,9 +31,7 @@ function EditDeck() {
     return () => abortController.abort();
   }, [deckId]);
 
-  if (error) {
-    return <ErrorMessage error={error} />;
-  }
+  
 
   const handleChange = ({ target }) => {
     setFormData({
@@ -48,7 +46,10 @@ function EditDeck() {
       .then(() => navigate(`/decks/${deckId}`))
       .catch((error) => setError(error));
   };
-
+  
+  if (error) {
+    return <ErrorMessage error={error} />;
+  }
   return (
     <Container>
       <Card variant="secondary">
